@@ -99,11 +99,11 @@ impl WebcamCapture {
 
         if cfg!(target_os = "macos") {
             // These options tell avfoundation how to configure the device
-            // Most cameras support 24fps as a safe framerate
-            opts.set("framerate", "24");
+            // Use 30fps which is widely supported on macOS cameras
+            opts.set("framerate", "30");
             // Use uyvy (yuv422) which is widely supported, fallback to default if not
             opts.set("pixel_format", "uyvy422");
-            tracing::info!("Using macOS avfoundation options: framerate=24, pixel_format=uyvy422");
+            tracing::info!("Using macOS avfoundation options: framerate=30, pixel_format=uyvy422");
         }
 
         // Try to open the device with explicit format
