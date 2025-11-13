@@ -1,0 +1,60 @@
+# Rust build artifacts
+/target/
+Cargo.lock
+*.rlib
+*.rmeta
+*.so
+*.dylib
+*.dll
+*.exe
+*.pdb
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+.sublime-project
+.sublime-workspace
+.claude/
+
+# OS files
+Thumbs.db
+.Thumbs.db
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+
+# Test outputs and logs
+*.log
+test-outputs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# DMG and test files (local development only)
+*.dmg
+*.dmg.bak
+test.jpg
+
+# Backup files
+*.bak
+
+# Local documentation (keep in README.md instead)
+# These are archived/reference docs that shouldn't be in git
+ARCHITECTURE_DIAGRAM.md
+COMPLETE_AND_WORKING.md
+FINAL_SUMMARY.md
+IMPLEMENTATION_COMPLETE.md
+PROJECT_SUMMARY.md
+QUICKSTART.md
+QUICK_START_VIDEO.md
+TROUBLESHOOTING.md
+WHAT_WAS_FIXED.md
