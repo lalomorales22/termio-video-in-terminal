@@ -115,16 +115,15 @@ impl TermIOServer {
                                                     if let Some(ref u) = user {
                                                         u.update_frame(frame.clone()).await;
 
-                                                        // Broadcast to others
+                                                        // Broadcast to ALL including the sender
                                                         let frame_msg = Message::Frame {
                                                             user_id: u.id.clone(),
                                                             username: u.username.clone(),
                                                             frame: frame.clone(),
                                                         };
-                                                        Self::broadcast_except(
+                                                        Self::broadcast_to_all(
                                                             &connections,
                                                             &frame_msg,
-                                                            &u.id,
                                                         )?;
                                                     }
                                                 }
